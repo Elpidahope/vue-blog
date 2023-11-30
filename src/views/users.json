@@ -1,22 +1,27 @@
 [
   {
     "id": 1,
-    "name": "Eintrag 1"
+    "name": "Eintrag 1",
+    "balance": 1000
   },
   {
     "id": 2,
-    "name": "Eintrag 2"
+    "name": "Eintrag 2",
+    "balance": 1000
   },
   {
     "id": 3,
-    "name": "Eintrag 3"
+    "name": "Eintrag 3",
+    "balance": 1000
   },
   {
     "id": 4,
-    "name": "Eintrag 4"
+    "name": "Eintrag 4",
+    "balance": 1000
   },
   {
     "id": 5,
-    "name": "Eintrag 5"
+    "name": "Eintrag 5",
+    "balance": 1000
   }
 ]
