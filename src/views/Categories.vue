@@ -1,16 +1,37 @@
 
 
 <template>
-  <h1>Finanzen</h1>
-  <p v-for="user in users" :key="user.id">{{user.name}}</p>
+  <div>
+    <h1>Finanzen</h1>
+    <div v-for="user in users" :key="user.id">
+      <p>Benutzer: {{ user.name }}</p>
+      <!-- Beispiel: Du kannst den Kontostand so anzeigen -->
+
+      <!-- VCard für jeden Benutzer -->
+      <VCard class="mx-auto" max-width="280" :title="user.name" :subtitle="`${user.name} on 2023-11-15, 05:15`">
+        <VDivider/>
+        <VCardText>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+        </VCardText>
+      </VCard>
+
+      <br/><br/>
+    </div>
+  </div>
 </template>
 
 <script>
-import userData from "./users.json"
+import { defineProps } from 'vue';
+import userData from "./users.json";
 
 export default {
-  data () {
-    return {users: userData}
-  }
-}
+  props: {
+    title: String,
+  },
+  data() {
+    return {
+      users: userData,
+    };
+  },
+};
 </script>
