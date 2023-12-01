@@ -9,6 +9,7 @@
       <VCard class="mx-auto" max-width="280" :title="user.name" :subtitle="`${user.name} on 2023-11-15, 05:15`">
         <VDivider />
         <VCardText>
+          Kontostand: {{ user.balance }} <p></p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
         </VCardText>
         <form @submit.prevent="withdrawMoney(user.id)">
