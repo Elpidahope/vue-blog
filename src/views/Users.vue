@@ -24,6 +24,13 @@
 
       <br /><br />
     </div>
+    <div>
+      <form @submit.prevent="abbuchen">
+        <label for="amount">Betrag zum Abbuchen:</label>
+        <input type="number" v-model="withdrawAmount" id="amount" />
+        <button type="submit">Abheben</button>
+      </form>
+    </div>
   </div>
 </template>
 
@@ -42,20 +49,19 @@ export default {
       // Finde den Benutzer mit der angegebenen ID
       const user = this.users.find((u) => u.id === userId);
 
-      if (user) {
-        // Überprüfe, ob genug Geld auf dem Konto ist
-        if (user.balance >= this.withdrawAmount) {
-          // Führe die Abbuchung durch
-          user.balance -= this.withdrawAmount;
-        } else {
-          // Falls nicht genug Geld vorhanden ist, kannst du hier eine entsprechende Fehlermeldung einfügen
-          console.log("Nicht genug Geld auf dem Konto");
-        }
-      }
-
       // Setze den Abbuchungsbetrag zurück
       this.withdrawAmount = 0;
     },
   },
 };
+</script>
+<script setup>
+</script>
+<script setup>
+</script>
+<script setup>
+</script>
+<script setup>
+</script>
+<script setup>
 </script>
