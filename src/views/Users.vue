@@ -49,6 +49,17 @@ export default {
       // Finde den Benutzer mit der angegebenen ID
       const user = this.users.find((u) => u.id === userId);
 
+      if (user) {
+        // Überprüfe, ob genug Geld auf dem Konto ist
+        if (user.balance >= this.withdrawAmount) {
+          // Führe die Abbuchung durch
+          user.balance -= this.withdrawAmount;
+        } else {
+          // Falls nicht genug Geld vorhanden ist, kannst du hier eine entsprechende Fehlermeldung einfügen
+          console.log("Nicht genug Geld auf dem Konto");
+        }
+      }
+
       // Setze den Abbuchungsbetrag zurück
       this.withdrawAmount = 0;
     },
